@@ -6,7 +6,7 @@ import router from './router';
     <router-link to="/cores">Cores</router-link> |
     <router-link to="/marcas">Marcas</router-link> |
     <router-link to="/acessorios">Acessorios</router-link> |
-    <router-link to="/modelos">Modelos</router-link> |
+    <!-- <router-link to="/modelos">Modelos</router-link> | -->
   </header>
   <main>
     <RouterView />

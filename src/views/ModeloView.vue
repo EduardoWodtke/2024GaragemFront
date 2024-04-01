@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { ref, reactive, onMounted } from "vue";
 import ModelosApi from "@/api/modelos";
 const modelosApi = new ModelosApi();
@@ -55,4 +55,4 @@ async function excluir(id) {
   </ul>
 </template>
 
-<style></style>
+<style></style> -->
