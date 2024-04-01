@@ -3,7 +3,7 @@ import { ref, reactive, onMounted } from "vue";
 import MarcasApi from "@/api/marcas";
 const marcasApi = new MarcasApi();
 
-const defaultMarca = { id: null, descricao: "" };
+const defaultMarca = { id: null, descricao: "", nacionalidade: "" };
 const marcas = ref([]);
 const marca = reactive({ ...defaultMarca });
 

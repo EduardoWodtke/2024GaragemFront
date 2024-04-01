@@ -1,9 +1,9 @@
-<!-- <script setup>
+<script setup>
 import { ref, reactive, onMounted } from "vue";
 import ModelosApi from "@/api/modelos";
 const modelosApi = new ModelosApi();
 
-const defaultModelo = { id: null, descricao: "" };
+const defaultModelo = { id: null, nome: "", marca: "", categoria: "" };
 const modelos = ref([]);
 const modelo = reactive({ ...defaultModelo });
 
@@ -41,6 +41,14 @@ async function excluir(id) {
   <hr />
   <div class="form">
     <input type="text" v-model="modelo.nome" placeholder="Nome" />
+    <select name="modelo" v-model="modelo">
+      <option disabled value="">Escolha uma marca</option>
+      <option v-for="modelo in modelos" :key="modelo.id" :value="modelo.marca">{{ modelo.marca }}</option>
+    </select>
+    <select name="modelo" v-model="modelo">
+      <option disabled value="">Escolha uma marca</option>
+      <option v-for="modelo in modelos" :key="modelo.id" :value="modelo.categoria">{{ modelo.categoria }}</option>
+    </select>
     <button @click="salvar">Salvar</button>
     <button @click="limpar">Limpar</button>
   </div>
@@ -55,4 +63,4 @@ async function excluir(id) {
   </ul>
 </template>
 
-<style></style> -->
+<style></style>
